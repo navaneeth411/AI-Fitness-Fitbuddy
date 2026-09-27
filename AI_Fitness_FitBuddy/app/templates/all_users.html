@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block title %}Admin View{% endblock %}
+{% block content %}
+<section class="card">
+  <p class="eyebrow">ADMIN DASHBOARD</p>
+  <h1>All Registered Users</h1>
+  {% if users %}
+  <div class="table-wrap">
+    <table>
+      <tr><th>ID</th><th>Name</th><th>Age</th><th>Weight</th><th>Goal</th><th>Intensity</th></tr>
+      {% for u in users %}
+      <tr><td>{{ u.user_id }}</td><td>{{ u.name }}</td><td>{{ u.age }}</td><td>{{ u.weight }}</td><td>{{ u.goal }}</td><td>{{ u.intensity }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% else %}<p>No users yet. Generate a plan first.</p>{% endif %}
+</section>
+{% endblock %}

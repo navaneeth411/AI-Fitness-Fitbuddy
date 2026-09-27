@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% block title %}AI Fitness – FitBuddy{% endblock %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">AI FITNESS ASSISTANT</p>
+    <h1>Your Personal Fitness Plan</h1>
+    <p>Enter your details and FitBuddy will generate a structured 7-day workout plan with a nutrition/recovery tip.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Create Your Plan</h2>
+  <form method="post" action="/generate-workout">
+    <div class="grid">
+      <label>User ID<input name="user_id" required placeholder="e.g. U001"></label>
+      <label>Name<input name="name" required placeholder="Your name"></label>
+      <label>Age<input type="number" name="age" min="13" max="100" required></label>
+      <label>Weight (kg)<input name="weight" required placeholder="e.g. 65"></label>
+      <label>Fitness Goal
+        <select name="goal" required>
+          <option value="Weight Loss">Weight Loss</option>
+          <option value="Muscle Gain">Muscle Gain</option>
+          <option value="General Wellness">General Wellness</option>
+          <option value="Flexibility">Flexibility</option>
+        </select>
+      </label>
+      <label>Workout Intensity
+        <select name="intensity" required>
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+      </label>
+    </div>
+    <button type="submit">Generate My Plan</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}FitBuddy AI Fitness{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <nav>
+    <a class="brand" href="/">FitBuddy</a>
+    <div><a href="/">Home</a><a href="/view-all-users">Admin View</a></div>
+  </nav>
+  <main class="container">{% block content %}{% endblock %}</main>
+  <footer>FitBuddy – AI Fitness Plan Generator</footer>
+</body>
+</html>

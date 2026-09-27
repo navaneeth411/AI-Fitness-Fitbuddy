@@ -1,0 +1,26 @@
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#edf2f7}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#111b2e;position:sticky;top:0;z-index:5}
+nav a{color:#dbeafe;text-decoration:none;margin-left:18px}
+.brand{font-size:24px;font-weight:800;margin-left:0}
+.container{width:min(1000px,92%);margin:35px auto}
+.hero{padding:40px 0}
+.eyebrow{letter-spacing:2px;font-size:12px;font-weight:700;opacity:.7}
+h1{font-size:42px;margin:8px 0 16px}
+h2{margin-top:0}
+.card{background:#121d31;border:1px solid #25334b;border-radius:18px;padding:28px;margin:22px 0;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{font-weight:700;display:flex;flex-direction:column;gap:8px}
+input,select,textarea{padding:13px;border-radius:10px;border:1px solid #34445f;background:#0c1628;color:white;font-size:15px}
+textarea{width:100%;min-height:130px;margin:10px 0}
+button,.button-link{display:inline-block;margin-top:18px;padding:13px 20px;border:0;border-radius:10px;background:#2563eb;color:white;font-weight:700;cursor:pointer;text-decoration:none}
+button:hover,.button-link:hover{opacity:.9}
+.profile{display:flex;flex-wrap:wrap;gap:10px}
+.profile span{background:#0c1628;padding:9px 12px;border-radius:999px}
+pre{white-space:pre-wrap;line-height:1.6;font-family:inherit;background:#0b1424;padding:20px;border-radius:12px;overflow:auto}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #2a3953}
+footer{text-align:center;padding:30px;opacity:.6}
+@media(max-width:700px){.grid{grid-template-columns:1fr}h1{font-size:32px}nav{padding:16px 4%}.container{width:94%}}

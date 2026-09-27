@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% block title %}Your Fitness Plan{% endblock %}
+{% block content %}
+<section class="card">
+  <p class="eyebrow">PERSONALIZED PLAN</p>
+  <h1>Hello, {{ user.name }} 👋</h1>
+  <div class="profile">
+    <span>Age: {{ user.age }}</span><span>Weight: {{ user.weight }} kg</span>
+    <span>Goal: {{ user.goal }}</span><span>Intensity: {{ user.intensity }}</span>
+  </div>
+</section>
+
+<section class="card">
+  <h2>{{ "Your 7-Day Workout Plan" }}</h2>
+  <pre>{{ plan }}</pre>
+</section>
+
+<section class="card">
+  <h2>🥗 Nutrition / Recovery Tip</h2>
+  <p>{{ tip }}</p>
+</section>
+
+<section class="card">
+  <h2>Improve Your Plan</h2>
+  <p>Tell FitBuddy what you want to change, such as “more cardio” or “include more rest days”.</p>
+  <form method="post" action="/submit-feedback">
+    <input type="hidden" name="user_id" value="{{ user.user_id }}">
+    <textarea name="feedback" required placeholder="Example: Add more cardio and one extra rest day."></textarea>
+    <button type="submit">Update My Plan</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+
+PROJECT TITLE:
+FitBuddy – AI Fitness Plan Generator using Gemini Models
+
+TEAM ROLE:
+Team Leader / Project Developer
+
+OBJECTIVE:
+Build a web-based application that uses generative AI to create personalized fitness plans from user information.
+
+CORE FEATURES:
+1. User registration/input
+2. Personalized 7-day workout plan
+3. Nutrition/recovery tip
+4. Feedback-based plan update
+5. SQLite data storage
+6. Admin view of registered users and plans
+
+TECHNOLOGIES:
+Python, FastAPI, Google Gemini API, HTML, CSS, Jinja2, SQLite, SQLAlchemy, Uvicorn.
+
+WORKFLOW:
+User Input -> FastAPI Backend -> Gemini AI -> Workout/Nutrition Result -> Database -> Feedback -> Updated Plan
+
+DISCLAIMER:
+This is an educational software project and does not replace professional medical or fitness advice.
