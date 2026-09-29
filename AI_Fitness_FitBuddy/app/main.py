@@ -12,13 +12,9 @@ app = FastAPI(title="FitBuddy - AI Fitness Plan Generator")
 templates = Jinja2Templates(directory="app/templates")
 
 
-@app.get("/", response_class=HTMLResponse)
-def home(request: Request):
-    return templates.TemplateResponse(
-        "index.html",
-        {"request": request}
-    )
-
+@app.get("/")
+def home():
+    return {"message": "Home works"}
 
 @app.post("/generate-workout", response_class=HTMLResponse)
 def generate(
