@@ -2,12 +2,16 @@ from fastapi import FastAPI, Request, Form, Depends
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
+from fastapi.staticfiles import StaticFiles
 
 from .database import get_db, User
 from .gemini_service import generate_workout, generate_nutrition_tip, update_plan
 
 
 app = FastAPI(title="FitBuddy - AI Fitness Plan Generator")
+app.mount("/static",
+StaticFiles(directory="app/static"),
+name="static")
 
 templates = Jinja2Templates(directory="app/templates")
 
