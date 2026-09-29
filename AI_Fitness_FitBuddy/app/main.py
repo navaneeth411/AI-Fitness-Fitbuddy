@@ -80,11 +80,10 @@ def generate(
         request=request,
         name="result.html",
         context={
-        {
             "user": user,
             "plan": user.original_plan,
             "tip": user.nutrition_tip,
-            "updated": True
+            "updated": False
         }
     )
 
