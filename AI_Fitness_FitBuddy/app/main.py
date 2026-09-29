@@ -77,13 +77,14 @@ def generate(
     db.refresh(user)
 
     return templates.TemplateResponse(
-        "result.html",
+        request=request,
+        name="result.html",
+        context={
         {
-            "request": request,
             "user": user,
             "plan": user.original_plan,
             "tip": user.nutrition_tip,
-            "updated": False
+            "updated": True
         }
     )
 
